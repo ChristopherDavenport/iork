@@ -3,7 +3,6 @@ package io.chrisdavenport.iork
 import cats._
 import cats.data._
 import cats.implicits._
-// import cats.arrow._
 
 final case class IorK[F[_], G[_], A](run: Ior[F[A], G[A]]){
 
