@@ -51,54 +51,8 @@ lazy val commonSettings = Seq(
   addCompilerPlugin("com.olegpy" %% "better-monadic-for" % betterMonadicForV),
   libraryDependencies ++= Seq(
     "org.typelevel"               %% "cats-core"                  % catsV,
-
-    "org.typelevel"               %% "kittens"                    % kittensV,
-    "org.typelevel"               %% "alleycats-core"             % catsV,
-    "org.typelevel"               %% "mouse"                      % mouseV,
-
-    "org.typelevel"               %% "cats-effect"                % catsEffectV,
-
-    "com.chuusai"                 %% "shapeless"                  % shapelessV,
-
-    "co.fs2"                      %% "fs2-core"                   % fs2V,
-    "co.fs2"                      %% "fs2-io"                     % fs2V,
-
-    "org.http4s"                  %% "http4s-dsl"                 % http4sV,
-    "org.http4s"                  %% "http4s-blaze-server"        % http4sV,
-    "org.http4s"                  %% "http4s-blaze-client"        % http4sV,
-    "org.http4s"                  %% "http4s-circe"               % http4sV,
-
-    "io.circe"                    %% "circe-core"                 % circeV,
-    "io.circe"                    %% "circe-generic"              % circeV,
-    "io.circe"                    %% "circe-parser"               % circeV,
-
-    "org.tpolecat"                %% "doobie-core"                % doobieV,
-    "org.tpolecat"                %% "doobie-h2"                  % doobieV,
-    "org.tpolecat"                %% "doobie-hikari"              % doobieV,
-    "org.tpolecat"                %% "doobie-postgres"            % doobieV,
-    "org.tpolecat"                %% "doobie-specs2"              % doobieV       % Test,
-
-    "io.chrisdavenport"           %% "log4cats-core"              % log4catsV,
-    "io.chrisdavenport"           %% "log4cats-slf4j"             % log4catsV,
-    "io.chrisdavenport"           %% "log4cats-extras"            % log4catsV,
-    "io.chrisdavenport"           %% "log4cats-testing"           % log4catsV     % Test,
-
-    "io.chrisdavenport"           %% "cats-par"                   % catsParV,
-    "io.chrisdavenport"           %% "cats-time"                  % catsTimeV,
-
-    "io.chrisdavenport"           %% "linebacker"                 % lineBackerV,
-
-    "io.chrisdavenport"           %% "fuuid"                      % fuuidV,
-
-    "com.github.pureconfig"       %% "pureconfig"                 % pureConfigV,
-
-    "eu.timepit"                  %% "refined"                    % refinedV,
-    "eu.timepit"                  %% "refined-scalacheck"         % refinedV      % Test,
-
     "org.specs2"                  %% "specs2-core"                % specs2V       % Test,
-    "org.specs2"                  %% "specs2-scalacheck"          % specs2V       % Test,
-    "org.typelevel"               %% "discipline"                 % disciplineV   % Test,
-    "com.github.alexarchambault"  %% "scalacheck-shapeless_1.14"  % scShapelessV  % Test
+    "org.specs2"                  %% "specs2-scalacheck"          % specs2V       % Test
   )
 )
 
