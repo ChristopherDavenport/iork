@@ -11,9 +11,10 @@ final case class IorK[F[_], G[_], A](run: Ior[F[A], G[A]]){
 
   def isLeft: Boolean =
     run.isLeft
-
   def isRight: Boolean =
     run.isRight
+  def isBoth: Boolean =
+    run.isBoth
 
   def swap: IorK[G, F, A] =
       IorK(run.swap)
