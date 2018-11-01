@@ -5,26 +5,8 @@ lazy val core = project.in(file("."))
     )
 
 val catsV = "1.4.0"
-val kittensV = "1.2.0"
-val catsEffectV = "1.0.0"
-val mouseV = "0.18"
-val shapelessV = "2.3.3"
-val fs2V = "1.0.0"
-val http4sV = "0.20.0-M1"
-val circeV = "0.10.1"
-val doobieV = "0.6.0"
-val pureConfigV = "0.9.2"
-val refinedV = "0.9.2"
-
-val log4catsV = "0.2.0"
-val catsParV = "0.2.0"
-val catsTimeV = "0.2.0"
-val fuuidV = "0.2.0-M2"
-val lineBackerV = "0.2.0-M2"
 
 val specs2V = "4.3.5"
-val disciplineV = "0.10.0"
-val scShapelessV = "1.2.0"
 
 val kindProjectorV = "0.9.8"
 val betterMonadicForV = "0.3.0-M4"
