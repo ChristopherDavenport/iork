@@ -38,12 +38,11 @@ final case class IorK[F[_], G[_], A](run: Ior[F[A], G[A]]){
     both: (F[A], G[A]) => C
   ): C = run.fold(left, right, both)
 
-  // TODO: Figure out how to better swivel
   def fold[H[_]](
     left: F ~> H,
     right: G ~> H,
-    swivel: (F[A], G[A]) => H[A]
-  ): H[A] = run.fold(left(_), right(_), swivel)
+    swivel: Tuple2K[F, G, ?] ~> H
+  ): H[A] = run.fold(left(_), right(_), (l, r) => swivel(Tuple2K(l, r)))
 
   final def putLeft[H[_]](left: H[A]): IorK[H, G, A] =
     semiFold(_ => IorK.leftc(left), IorK.bothc(left, _), (_, b) => IorK.bothc(left, b))
